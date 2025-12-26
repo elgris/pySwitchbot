@@ -99,4 +99,21 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
+
+## SwitchbotMeterProCO2 (CO₂ Meter Pro)
+
+```python
+import asyncio
+from switchbot.discovery import GetSwitchbotDevices
+from switchbot.devices import meter
+
+async def main():
+    client = await GetSwitchbotDevices().get_meter_pro_co2()
+    # Assuming you have the MAC address or use discovery to get the device
+    meter_device = meter.SwitchbotMeterProCO2(client)
+    await meter_device.set_time(int(time.time()))
+
+asyncio.run(main())
+```
 ```

@@ -855,6 +855,7 @@ def build_advertisement_data(
     }
 
     type_data = SUPPORTED_TYPES.get(_model)
+    _LOGGER.warning(f"Parsed model: {_model}, {type_data}, _service_data: {_service_data.hex("-")}, _service_data raw bytes: {_service_data}, _mfr_data: {_mfr_data.hex("-")}")
     if type_data:
         model_data = type_data["func"](_service_data, _mfr_data)
         if model_data:

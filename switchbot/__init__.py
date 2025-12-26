@@ -52,6 +52,7 @@ from .devices.light_strip import (
 )
 from .devices.lock import SwitchbotLock
 from .devices.plug import SwitchbotPlugMini
+from .devices.meter import SwitchbotMeterProCO2
 from .devices.relay_switch import (
     SwitchbotGarageDoorOpener,
     SwitchbotRelaySwitch,
@@ -113,6 +114,7 @@ __all__ = [
     "SwitchbotSupportedType",
     "SwitchbotSupportedType",
     "SwitchbotVacuum",
+    "SwitchbotMeterProCO2",
     "close_stale_connections",
     "close_stale_connections_by_address",
     "fetch_cloud_devices",
